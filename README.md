@@ -16,6 +16,12 @@ Node.js: Make sure you have Node.js and npm installed on your machine.
 Git: Git is required to clone the repository.
 
 Install project dependencies: npm install
-Install Playwright browsers: npx playwright test
-command to run suite : npx playwright test tests/E2ETest.spec.js --headed --project=chromium
-After a test run, you can generate and view a detailed HTML report: npx playwright show-report
+
+Install browsers: npx playwright install
+
+this test suite support cross browser testing and headless testing so below command will run suite on chromium only
+command to run suite : npx playwright test tests/E2ETest.spec.js --headed --project=chromium 
+
+command to run suite on all browsers: npx playwright test tests/E2ETest.spec.js --headed
+
+After a test run, you can view a detailed HTML report: npx playwright show-report
